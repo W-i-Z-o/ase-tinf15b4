@@ -23,13 +23,13 @@ public class Main {
         TimerSystem timerSystem = new SecondsTimerSystem();
         Cell<Double> time = timerSystem.time;
 
-        SLabel slTime = new SLabel(time.map(t -> "Time: "+t));
+        SLabel slTime = new SLabel(time.map(t -> "Time: "+t+"s"));
         frame.add(slTime);
         
-        SLabel slSpeed = new SLabel(time.map(t -> "Speed: "+t*9.81));
+        SLabel slSpeed = new SLabel(time.map(t -> "Speed: "+t*9.81+"m/s"));
         frame.add(slSpeed);
         
-        SLabel slDistance = new SLabel(time.map(t -> "Distance: "+ 9.81/2*Math.pow(t, 2)));
+        SLabel slDistance = new SLabel(time.map(t -> "Distance: "+ 9.81/2*Math.pow(t, 2)+"m"));
         frame.add(slDistance);
 
         frame.setSize(400, 160);
